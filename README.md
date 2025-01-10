@@ -23,7 +23,7 @@ API_KEY=1231jlkj
 - Swagger ML server: http://localhost:8007/docs/
 
 
-## Ткхнологии
+## Тeхнологии
 - FastAPI
 - Streamlit
 - Sqlite
