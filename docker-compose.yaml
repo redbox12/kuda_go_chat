@@ -1,0 +1,38 @@
+
+services: 
+  backend:
+    container_name: backend
+    build: ./backend
+    ports:
+      - "80:80"
+    volumes:
+      - ./backend:/code
+    restart: always
+
+  frontend:
+    container_name: frontend
+    build: ./frontend
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./frontend:/frontend
+    depends_on:
+      - backend
+    restart: always
+
+  ml_server:
+    container_name: ml_server
+    build: ./ml
+    ports:
+      - "8007:8007"
+    volumes:
+      - ./ml:/ml
+    restart: always
+    env_file:
+      - ./.env
+
+
+
+
+
+      

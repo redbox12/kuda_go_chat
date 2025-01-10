@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+PyJWT
+email-validator
+pydantic[email]
+python-dotenv
+openai
+requests
